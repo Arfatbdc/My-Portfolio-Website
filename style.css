@@ -1,0 +1,745 @@
+/**
+ * Importing the Poppins font from Google Fonts with various weights and styles.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/**
+ * Global styles applied to all elements.
+ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+/**
+ * CSS variables for theme colors.
+ */
+:root {
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color: #fff;
+  --main-color: #0ef;
+}
+
+/**
+ * Base styles for the HTML document.
+ */
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/**
+ * Base styles for the body element.
+ */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/**
+ * Base styles for section elements.
+ */
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+/**
+ * Styles for the header element.
+ */
+.header {
+  position: fixed;
+  /* fixed position */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  padding: 2rem 9%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, red, yellow, green);
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+.header .sticky {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.2);
+}
+
+/**
+ * Styles for the logo element.
+ */
+.logo {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  cursor: default;
+}
+
+/**
+ * Styles for the navbar links.
+ */
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: 0.3s;
+}
+
+/**
+ * Styles for navbar links on hover and when active.
+ */
+.navbar a:hover,
+.navbar a.active {
+  color: var(--main-color);
+}
+
+/**
+ * Styles for the menu icons.
+ */
+#menu-icons {
+  font-size: 3.6rem;
+  color: var(--text-color);
+  cursor: pointer;
+  display: none;
+}
+
+/**
+ * Styles for the home section.
+ */
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    linear-gradient(to right, brown, hotpink),
+    linear-gradient(to bottom, darkgoldenrod, darkkhaki);
+  background-size: cover, cover;
+  animation: animateBackground 5s infinite alternate;
+}
+
+@keyframes animateBackground {
+  0% {
+    background:
+      linear-gradient(to right, brown, hotpink),
+      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
+  }
+
+  50% {
+    background:
+      linear-gradient(to right, yellow, red),
+      linear-gradient(to bottom, green, blue);
+  }
+
+  100% {
+    background:
+      linear-gradient(to right, red, yellow),
+      linear-gradient(to bottom, blue, green);
+  }
+}
+
+
+/**
+ * Styles for the home content headings.
+ */
+.home-content h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+/**
+ * Additional styles for the second h3 element in home content.
+ */
+.home-content h3:nth-of-type(2) {
+  margin-bottom: 2rem;
+}
+
+/**
+ * Styles for the main heading in home content.
+ */
+.home-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/**
+ * Styles for the home image.
+ */
+.home-img img {
+  width: 60%;
+  height: 50%;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+/**
+ * Keyframe animation for the home image.
+ */
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2.4rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/**
+ * Styles for the paragraph in home content.
+ */
+.home-content p {
+  font-size: 1.6rem;
+}
+
+/**
+ * Styles for social media links.
+ */
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+}
+
+/**
+ * Styles for social media links on hover.
+ */
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--text-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+/**
+ * Styles for button elements.
+ */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background: var(--main-color);
+  color: var(--text-color);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  box-shadow: 0 0 1rem var(--main-color);
+  letter-spacing: .1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/**
+ * Styles for button elements on hover.
+ */
+.btn:hover {
+  box-shadow: none;
+}
+
+/**
+ * Styles for the about section.
+ */
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--second-bg-color);
+}
+
+/**
+ * Styles for the heading elements.
+ */
+.heading {
+  font-size: 4.5rem;
+  text-align: center;
+}
+
+/**
+ * Styles for span elements.
+ */
+span {
+  color: var(--main-color);
+}
+
+/**
+ * Styles for the about content headings.
+ */
+.about-content h2 {
+  text-align: left;
+  line-height: 1.2;
+}
+
+/**
+ * Styles for the about content subheadings.
+ */
+.about-content h3 {
+  font-size: 2.6rem;
+}
+
+/**
+ * Styles for the about content paragraphs.
+ */
+.about-content p {
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+}
+
+/**
+ * Styles for the services section headings.
+ */
+.services h2 {
+  margin-bottom: 5rem;
+}
+
+/**
+ * Styles for the services container.
+ */
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.9rem;
+}
+
+/**
+ * Styles for individual service boxes.
+ */
+.services-container .services-box {
+  flex: 1 1 30rem;
+  background-color: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--bg-color);
+  transition: .5s ease;
+}
+
+/**
+ * Styles for service boxes on hover.
+ */
+.services-container .services-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+/**
+ * Styles for icons in service boxes.
+ */
+.services-box i {
+  font-size: 5rem;
+  color: var(--main-color);
+}
+
+/**
+ * Styles for service box headings.
+ */
+.services-box h3 {
+  font-size: 2.5rem;
+}
+
+/**
+ * Styles for service box paragraphs.
+ */
+.services-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+
+/**
+ * Styles for the portfolio section.
+ */
+.porfolio {
+  background: var(--second-bg-color);
+}
+
+/**
+ * Styles for the portfolio section headings.
+ */
+.porfolio h2 {
+  margin-bottom: 4rem;
+}
+
+/**
+ * Styles for the portfolio container.
+ */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+/**
+ * Styles for individual portfolio boxes.
+ */
+.portfolio-container .portfolio-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  display: flex;
+}
+
+/**
+ * Styles for images in portfolio boxes.
+ */
+.portfolio-box img {
+  width: 100%;
+  transition: .5s ease;
+}
+
+/**
+ * Styles for images in portfolio boxes on hover.
+ */
+.portfolio-box:hover img {
+  transform: scale(1.1);
+}
+
+/**
+ * Styles for the portfolio layer.
+ */
+.portfolio-box .portfolio-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 3rem;
+  transform: translateY(100%);
+  transition: .5s ease;
+}
+
+/**
+ * Styles for the portfolio layer on hover.
+ */
+.portfolio-box:hover .portfolio-layer {
+  transform: translateY(0);
+}
+
+/**
+ * Styles for portfolio layer headings.
+ */
+.portfolio-layer h4 {
+  font-size: 2.5rem;
+}
+
+/**
+ * Styles for portfolio layer paragraphs.
+ */
+.portfolio-layer p {
+  font-size: 1.6rem;
+  margin: 2rem 0 1rem;
+}
+
+/**
+ * Styles for portfolio layer links.
+ */
+.portfolio-layer a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: var(--text-color);
+  border-radius: 50%;
+}
+
+/**
+ * Styles for icons in portfolio layer links.
+ */
+.portfolio-layer a i {
+  font-size: 2rem;
+  color: var(--second-bg-color);
+}
+
+/**
+ * Styles for the contact section headings.
+ */
+.contact h2 {
+  margin-bottom: 3rem;
+}
+
+/**
+ * Styles for the contact form.
+ */
+.contact form {
+  max-width: 70rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/**
+ * Styles for input boxes in the contact form.
+ */
+.contact form .input-box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/**
+ * Styles for input fields and textareas in the contact form.
+ */
+.contact form .input-box input,
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: .8rem;
+  margin: .7rem 0;
+}
+
+/**
+ * Styles for input fields in the contact form.
+ */
+.contact form .input-box input {
+  width: 49%;
+}
+
+/**
+ * Styles for textareas in the contact form.
+ */
+.contact form textarea {
+  resize: none;
+}
+
+/**
+ * Styles for the submit button in the contact form.
+ */
+.contact form .btn {
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+/**
+ * Styles for the footer section.
+ */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);
+}
+
+/**
+ * Styles for paragraphs in the footer.
+ */
+.footer-text p {
+  font-size: 1.6rem;
+}
+
+/**
+ * Styles for the icon top link in the footer.
+ */
+.footer-iconTop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: .8rem;
+  background: var(--main-color);
+  border-radius: .8rem;
+  transition: .5s ease;
+}
+
+/**
+ * Styles for the icon top link in the footer on hover.
+ */
+.footer-iconTop a:hover {
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+/**
+ * Styles for icons in the icon top link in the footer.
+ */
+.footer-iconTop a i {
+  font-size: 2.4rem;
+  color: var(--bg-color);
+}
+
+/* BREAKPOINTS */
+
+/**
+ * Media query for screens with a maximum width of 1200px.
+ */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/**
+ * Media query for screens with a maximum width of 991px.
+ */
+@media (max-width: 991px) {
+  .header {
+    padding: 2rem 3%;
+  }
+
+  section {
+    padding: 10rem 2% 2rem;
+  }
+
+  .services {
+    padding-bottom: 7rem;
+  }
+
+  .portfolio {
+    padding-bottom: 7rem;
+  }
+
+  .contact {
+    min-height: auto;
+    padding-bottom: 7rem;
+  }
+
+  .footer {
+    padding: 2rem 3%;
+  }
+}
+
+/**
+ * Media query for screens with a maximum width of 768px.
+ */
+@media (max-width: 768px) {
+  #menu-icons {
+    display: block;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, .2);
+    display: none;
+  }
+
+  .active.navbar {
+    display: block;
+  }
+
+  .navbar a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home-content h3 {
+    font-size: 2.6rem;
+  }
+
+  .home-content h1 {
+    font-size: 5rem;
+  }
+
+  .home-img img {
+    width: 50vw;
+    margin-top: 4rem;
+  }
+
+  .about {
+    flex-direction: column-reverse;
+  }
+
+  .about img {
+    width: 60vw;
+    margin-top: 4rem;
+  }
+
+  .services h2 {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio h2 {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/**
+ * Media query for screens with a maximum width of 617px.
+ */
+@media (max-width: 617px) {
+  .portfolio-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/**
+ * Media query for screens with a maximum width of 450px.
+ */
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .contact form .input-box input {
+    width: 100%;
+  }
+}
+
+/**
+ * Media query for screens with a maximum width of 365px.
+ */
+@media (max-width: 365px) {
+  .home-img img {
+    width: 50vw;
+  }
+
+  .about-img img {
+    width: 70vw;
+  }
+
+  .footer {
+    flex-direction: column-reverse;
+  }
+
+  .footer p {
+    text-align: center;
+    margin-top: 2rem;
+  }
+}
