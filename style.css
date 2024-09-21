@@ -120,7 +120,7 @@ section {
   justify-content: center;
   align-items: center;
   background:
-    linear-gradient(to right, brown, hotpink),
+    linear-gradient(to right, brown, lightblue),
     linear-gradient(to bottom, darkgoldenrod, darkkhaki);
   background-size: cover, cover;
   animation: animateBackground 5s infinite alternate;
@@ -129,20 +129,19 @@ section {
 @keyframes animateBackground {
   0% {
     background:
-      linear-gradient(to right, brown, hotpink),
+      linear-gradient(to right, Cherry red, bubblegum pink),
       linear-gradient(to bottom, darkgoldenrod, darkkhaki);
   }
 
   50% {
     background:
-      linear-gradient(to right, yellow, red),
-      linear-gradient(to bottom, green, blue);
+      linear-gradient(to right, #2C5F2D, #97BC62),
+      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
   }
-
   100% {
     background:
-      linear-gradient(to right, red, yellow),
-      linear-gradient(to bottom, blue, green);
+      linear-gradient(to right, #735DA5, #D3C5E5),
+      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
   }
 }
 
@@ -265,7 +264,29 @@ section {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  background-color: var(--second-bg-color);
+  background:
+  linear-gradient(to right, brown, hotpink),
+  linear-gradient(to bottom, darkgoldenrod, darkkhaki);
+ background-size: cover, cover;
+ animation: animateBackground1 5s infinite alternate;
+}
+@keyframes animateBackground1 {
+  0% {
+    background:
+      linear-gradient(to right, #20948B, #20948B),
+      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
+  }
+
+  50% {
+    background:
+      linear-gradient(to right, #20948B, #20948B),
+      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
+  }
+  100% {
+    background:
+      linear-gradient(to right, #20948B, #20948B),
+      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
+  }
 }
 
 /**
@@ -304,6 +325,32 @@ span {
 .about-content p {
   font-size: 1.6rem;
   margin: 2rem 0 3rem;
+}
+
+.services {
+  background:
+  linear-gradient(to right, brown, hotpink),
+  linear-gradient(to bottom, darkgoldenrod, darkkhaki);
+  background-size: cover, cover;
+  animation: animateBackground1 5s infinite alternate;
+}
+@keyframes animateBackground1 {
+  0% {
+    background:
+      linear-gradient(to right, var(--second-bg-color), var(--second-bg-color)),
+      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
+  }
+
+  /* 50% {
+    background:
+      linear-gradient(to right, saddlebrown, saddlebrown),
+      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
+  } */
+  100% {
+    background:
+      linear-gradient(to right, darkblue, darkblue),
+      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
+  }
 }
 
 /**
@@ -484,6 +531,7 @@ span {
 /**
  * Styles for the contact section headings.
  */
+
 .contact h2 {
   margin-bottom: 3rem;
 }
