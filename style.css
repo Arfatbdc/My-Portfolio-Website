@@ -264,30 +264,11 @@ section {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  background:
-  linear-gradient(to right, brown, hotpink),
-  linear-gradient(to bottom, darkgoldenrod, darkkhaki);
- background-size: cover, cover;
- animation: animateBackground1 5s infinite alternate;
+  background-size: cover, cover;
+  background: radial-gradient(circle, #C0C0C0,#808080	);
+  
 }
-@keyframes animateBackground1 {
-  0% {
-    background:
-      linear-gradient(to right, #20948B, #20948B),
-      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
-  }
 
-  50% {
-    background:
-      linear-gradient(to right, #20948B, #20948B),
-      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
-  }
-  100% {
-    background:
-      linear-gradient(to right, #20948B, #20948B),
-      linear-gradient(to bottom, darkgoldenrod, darkkhaki);
-  }
-}
 
 /**
  * Styles for the heading elements.
@@ -337,7 +318,7 @@ span {
 @keyframes animateBackground1 {
   0% {
     background:
-      linear-gradient(to right, var(--second-bg-color), var(--second-bg-color)),
+      linear-gradient(to right, var(--bg-color), var(--bg-color)),
       linear-gradient(to bottom, darkgoldenrod, darkkhaki);
   }
 
