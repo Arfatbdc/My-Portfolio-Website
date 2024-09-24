@@ -265,7 +265,8 @@ section {
   align-items: center;
   gap: 2rem;
   background-size: cover, cover;
-  background: radial-gradient(circle, #C0C0C0,#808080	);
+  background: radial-gradient(circle, #deb887, #808080		);
+
   
 }
 
